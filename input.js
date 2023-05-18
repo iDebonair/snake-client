@@ -11,13 +11,13 @@ const setupInput = (conn) => {
   return stdin;
 };
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit(); // Exit the program if the 'Ctrl + C' key combination is pressed
   }
-    const movementOrMessage = movementAndMessage[key];
-    if (movementOrMessage) {
-      connection.write(movementOrMessage);
-    }
+  const movementOrMessage = movementAndMessage[key];
+  if (movementOrMessage) {
+    connection.write(movementOrMessage);
+  }
 };
 module.exports = setupInput;
